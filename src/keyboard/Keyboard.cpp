@@ -1,5 +1,4 @@
 #include "Keyboard.h"
-#include <iostream>
 
 bool Keyboard::isPressed(std::uint8_t key) {
     return SDL_GetKeyboardState(nullptr)[keyMap[key]];
@@ -7,22 +6,22 @@ bool Keyboard::isPressed(std::uint8_t key) {
 
 void Keyboard::reset()
 {
-    released = NULL_KEY;
+    released = nullKey;
     keysDown.clear();
 }
 
 std::uint8_t Keyboard::wasPressed() {
-    if (released != NULL_KEY) {
-        auto temp {released};
+    if (released != nullKey) {
+        std::uint8_t temp {released};
         reset();
         return temp;
     }
-    return NULL_KEY;
+    return nullKey;
 }
 
 void Keyboard::onKeyDown(SDL_Scancode& scancode)
 {
-    if (released != NULL_KEY)
+    if (released != nullKey)
         return;
 
     for (int i {0}; i != keyMap.size(); ++i) {
