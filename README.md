@@ -1,6 +1,6 @@
 # CHIP-8/SUPER-CHIP Emulator
 <p align="center">
-  <img alt="Spacefight 2091 demo gif" src="https://raw.githubusercontent.com/harrow22/SCHIP-8/master/assets/demo.gif" />
+  <img alt="Spacefight 2091 demo gif" src="https://raw.githubusercontent.com/encephalalgia/schip8/master/assets/demo.gif" />
 </p>
 
 Another CHIP-8 and SUPER-CHIP emulator written in C++. Sound not implemented.
@@ -26,11 +26,11 @@ You will need,
 
 ### With CMake
 ```
-git clone https://github.com/harrow22/SCHIP-8.git
-cd SCHIP-8
+git clone https://github.com/encephalalgia/schip8.git
+cd schip8
 cmake -S . -B build -G your_generator -DCMAKE_BUILD_TYPE=RELEASE -DCMAKE_PREFIX_PATH=path/to/SDL2install
 cmake --build build
-build/src/SCHIP-8.exe <ARGUMENTS>...
+build/src/schip8.exe <ARGUMENTS>...
 ```
 
 > [!IMPORTANT]
@@ -76,7 +76,7 @@ ctest
 
 For a more detailed report, the test logs are written to `tests/Testing/Temporary/` or you can use the command,
 ```
-$ cat Testing/Temporary/LastTestLog.txt
+cat Testing/Temporary/LastTestLog.txt
 ```
 
 ## Thanks
